@@ -10,6 +10,7 @@
 #![feature(panic_info_message)]
 #![feature(in_band_lifetimes, crate_visibility_modifier)]
 #![feature(associated_type_defaults)]
+#![feature(try_trait)]
 #![warn(unreachable_pub)]
 #![no_std]
 
@@ -52,6 +53,6 @@ pub use crate::sched::Kernel;
 pub mod procs {
     pub use crate::process::{
         load_processes, AlwaysRestart, Error, FaultResponse, FunctionCall, Process,
-        ProcessRestartPolicy, ProcessType, ThresholdRestart,
+        ProcessLoadError, ProcessRestartPolicy, ProcessType, ThresholdRestart,
     };
 }
